@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class CardsComponent {
 
+  hide = true
+
+  mostrarTelaAtual = true
+
   id!: string
   nome!: string
   email!: string
@@ -14,5 +18,9 @@ export class CardsComponent {
   rota!: string;
   img!: File;
   imgUrl!: string;
+
+  selecionarImagem(event: any): void {
+    this.img = event.target.files[0];
+  }
 
 }

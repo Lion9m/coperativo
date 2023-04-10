@@ -39,3 +39,15 @@
   flex: 1 1 auto;
   width: 100%;
 }
+
+.botaoPesquisar{
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 30%;
+}
+
+.botaoAtualizar{
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 15px;
+}
