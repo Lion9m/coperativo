@@ -76,7 +76,7 @@ export class CadastroComponent {
 //==================================================================================================================//
   //put - ok
   atualizarDado(){
-
+    this.id = this.id;
     const url = "https://rhuna.herokuapp.com/crud/" + this.id;
 
     const formData = new FormData();
