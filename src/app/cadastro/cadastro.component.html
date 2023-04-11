@@ -25,9 +25,10 @@
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
   </mat-form-field>
-  <br>
-    <input type="file"(change)="selecionarImagem($event) ">
-  <br>
+    <div>
+    <input type="file"(change)="selecionarImagem($event)" class="file">
+    <button mat-raised-button color="primary" class="botaoDeletar" *ngIf="mostrarBotao">Deletar</button>
+    </div>
   </div>
   <!--==========================================================================================================================-->
   <!--==========================================================================================================================-->
