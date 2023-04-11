@@ -20,8 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CardsComponent } from './cards/cards.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
