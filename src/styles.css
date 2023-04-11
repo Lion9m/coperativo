@@ -3,5 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-typography{
+  background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/6891104-abstrato-gradiente-fundo-roxo-elegante-estilo-perfeito-para-design-papel-de-parede-promocao-apresentacao-site-banner-etc-ilustracao-fundo-vetor.jpg);
+}
