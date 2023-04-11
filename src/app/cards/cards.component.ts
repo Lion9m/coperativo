@@ -49,5 +49,16 @@ export class CardsComponent {
 
   }
 
+  async delete(idL: number){
+
+    await axios.delete("https://rhuna.herokuapp.com/crud/delete/"+idL)
+    .then((response) => {
+
+      console.log('O json foi deletado', response)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
 
 }
