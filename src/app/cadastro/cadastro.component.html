@@ -1,9 +1,9 @@
 <!--==========================================================================================================================-->
 <!--==========================================================================================================================-->
 <!--INPUTS-->
-<div *ngIf="mostrarTelaAtual">
+
   <div class="cor-do-formulario">
-  <mat-form-field appearance="fill" class="inputs">
+  <mat-form-field appearance="fill" class="inputs" *ngIf="mostrarBotao">
     <mat-label>Id</mat-label>
     <input matInput [(ngModel)]="id">
   </mat-form-field>
@@ -36,9 +36,9 @@
   <div class="example-button-row">
     <button mat-raised-button color="primary" class="botao" (click)="criarDado()">Cadastrar</button>
 
-    <button mat-raised-button color="warn" class="botaoAtualizar" (click)="atualizarDado()">Atualizar</button>
+    <button mat-raised-button color="warn" class="botaoAtualizar" (click)="atualizarDado()" *ngIf="mostrarBotao">Atualizar</button>
 
-    <button mat-raised-button  class="botaoPesquisar" (click)="pegarDado()" >Pesquisar</button>
+    <button mat-raised-button  class="botaoPesquisar" (click)="pegarDado()" (click)="mostrarOuOcultarBotao()">Pesquisar</button>
   <br>
   </div>
   <!--==========================================================================================================================-->
