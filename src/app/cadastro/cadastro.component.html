@@ -27,7 +27,7 @@
   </mat-form-field>
     <div>
     <input type="file"(change)="selecionarImagem($event)" class="file">
-    <button mat-raised-button color="primary" class="botaoDeletar" *ngIf="mostrarBotao">Deletar</button>
+    <button mat-raised-button color="primary" (click)="delete()" class="botaoDeletar" *ngIf="mostrarBotao">Deletar</button>
     </div>
   </div>
   <!--==========================================================================================================================-->

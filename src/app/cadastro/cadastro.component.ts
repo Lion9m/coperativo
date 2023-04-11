@@ -108,4 +108,17 @@ mostrarOuOcultarBotao() {
 
 //ocultar
 
+
+//deletar
+async delete(){
+
+  await axios.delete("https://rhuna.herokuapp.com/crud/delete/" + this.id)
+  .then((response) => {
+    console.log('O json foi deletado', response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+}
+
 }
