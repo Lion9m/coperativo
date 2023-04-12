@@ -1,6 +1,6 @@
 .example-card {
-  max-width: 300px;
-  max-height: 300px;
+  width: 250px;
+  height: 350px;
   margin: 5%;
 }
 
@@ -9,6 +9,8 @@
 }
 
 .img {
+  width: 160px;
+  height: 160px;
   border-radius: 10px;
   margin: auto;
 }
