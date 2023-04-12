@@ -40,17 +40,22 @@ mostrarOuOcultarBotao() {
        formData.append("senha", this.senha )
        formData.append("file", this.img);
 
-    //  await axios.post(url, formData, {
-    //    headers: {
-    //      'Content-Type': 'multipart/form-data'
-    //    }
-    //  })
-    //    .then(function(response){
-    //      console.log("Funcionando", response);
-    //    })
-    //    .catch(function (error){
-    //      console.error("Erro", error);
-    //    });
+     await axios.post(url, formData, {
+       headers: {
+         'Content-Type': 'multipart/form-data'
+       }
+     })
+       .then(function(response){
+         console.log("Funcionando", response);
+       })
+       .catch(function (error){
+         console.error("Erro", error);
+       });
+
+       this.nome = '';
+       this.email = '';
+       this.senha = '';
+     
    }
   //==================================================================================================================//
   //==================================================================================================================//
@@ -85,23 +90,27 @@ mostrarOuOcultarBotao() {
     this.id = this.id;
     const url = "https://rhuna.herokuapp.com/crud/" + this.id;
 
-    // const formData = new FormData();
-    //   formData.append("nome", this.nome)
-    //   formData.append("email", this.email)
-    //   formData.append("senha", this.senha)
-    //   formData.append("file", this.img);
+    const formData = new FormData();
+      formData.append("nome", this.nome)
+      formData.append("email", this.email)
+      formData.append("senha", this.senha)
+      formData.append("file", this.img);
 
-    // axios.put(url, formData,{
-    //   headers: {
-    //     'Content-Type': 'multipart/form-data'
-    //   }
-    // })
-    //   .then(response => {
-    //     console.log ("Resposta recebida", response.data);
-    //   })
-    //   .catch(error => {
-    //     console.error("Erro", error);
-    //   });
+    axios.put(url, formData,{
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then(response => {
+        console.log ("Resposta recebida", response.data);
+      })
+      .catch(error => {
+        console.error("Erro", error);
+      });
+      
+      this.nome = '';
+      this.email = '';
+      this.senha = '';
   }
 //==================================================================================================================//
 //==================================================================================================================//

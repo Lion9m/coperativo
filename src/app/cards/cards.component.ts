@@ -10,8 +10,6 @@ interface Dados{
   email:string;
   senha:string;
   rota:string;
-
-
 }
 
 
