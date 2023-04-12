@@ -23,13 +23,15 @@ export class CadastroComponent {
   }
 
   //==================================================================================================================//
-mostrarBotao = false;
+  mostrarBotao = false;
 
-mostrarOuOcultarBotao() {
-  this.mostrarBotao = true;
-}
+  mostrarOuOcultarBotao() {
+    this.mostrarBotao = true;
+  }
 
   //==================================================================================================================//
+  //==================================================================================================================//
+  //post
   async criarDado(){
 
     const url = "https://rhuna.herokuapp.com/crud";
@@ -55,37 +57,37 @@ mostrarOuOcultarBotao() {
        this.nome = '';
        this.email = '';
        this.senha = '';
-     
+
    }
   //==================================================================================================================//
   //==================================================================================================================//
-  //get - só dá para pegar a array
+  //get
   async pegarDado(){
 
     const url = "https://rhuna.herokuapp.com/crud"
 
-    // await axios.get(url)
-    //   .then(response =>{
+    await axios.get(url)
+      .then(response =>{
 
-    //     let lista = response.data.length
+        let lista = response.data.length
 
-    //     console.log(response);
+        console.log(response);
 
-    //     this.id = response.data[lista - 1].id
-    //     this.nome = response.data[lista - 1].nome
-    //     this.email = response.data[lista - 1].email
-    //     this.senha =  response.data[lista - 1].senha
-    //     this.img = response.data[lista - 1].file
-    //   })
-    //   .catch(function(error){
-    //     console.log("Erro", error);
-    //   })
-    //   .finally(function(){
-    //   });
+        this.id = response.data[lista - 1].id
+        this.nome = response.data[lista - 1].nome
+        this.email = response.data[lista - 1].email
+        this.senha =  response.data[lista - 1].senha
+        this.img = response.data[lista - 1].file
+      })
+      .catch(function(error){
+        console.log("Erro", error);
+      })
+      .finally(function(){
+      });
   }
 //==================================================================================================================//
 //==================================================================================================================//
-  //put - ok
+  //put
   atualizarDado(){
     this.id = this.id;
     const url = "https://rhuna.herokuapp.com/crud/" + this.id;
@@ -107,17 +109,13 @@ mostrarOuOcultarBotao() {
       .catch(error => {
         console.error("Erro", error);
       });
-      
+
       this.nome = '';
       this.email = '';
       this.senha = '';
   }
 //==================================================================================================================//
 //==================================================================================================================//
-
-//ocultar
-
-
 //deletar
 async delete(){
 
