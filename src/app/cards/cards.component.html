@@ -1,5 +1,5 @@
 <div class="image-container">
-<div  *ngFor="let item of listaCards$|async; index as i">
+<div  *ngFor="let item of listaCards$">
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title class="nome">{{item.nome}}</mat-card-title>
@@ -11,4 +11,3 @@
   </mat-card>
 </div>
 </div>
-

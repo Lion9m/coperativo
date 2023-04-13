@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import axios from 'axios';
 import { Observable } from 'rxjs';
+
 
 interface Dados{
 
@@ -11,6 +11,7 @@ interface Dados{
   senha:string;
   rota:string;
 }
+
 
 
 @Component({
@@ -32,7 +33,22 @@ export class CardsComponent {
   senha!:string;
   rota!:string;
 
-  listaCards$: Observable<Dados[]>;
+  listaCards$: Dados[] = [];
+
+
+  url = "https://rhuna.herokuapp.com/crud/";
+
+
+  constructor(){
+    axios.get<Dados[]>("https://rhuna.herokuapp.com/crud/").then(
+      (response) => {
+        this.listaCards$ = response.data;})
+
+
+  }
+
+  /* Codigo do professor
+   listaCards$: Observable<Dados[]>;
 
   url = "https://rhuna.herokuapp.com/crud/";
 
@@ -45,6 +61,6 @@ export class CardsComponent {
       (err)=> err
     )
 
-  }
+  } */
 
 }
